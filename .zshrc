@@ -91,4 +91,5 @@ source <(fzf --zsh)
 # Set SSH_AUTH_SOCK for Bitwarden SSH agent on macOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export SSH_AUTH_SOCK=/Users/naugustin/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+    export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
 fi
