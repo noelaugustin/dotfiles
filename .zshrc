@@ -88,4 +88,7 @@ export COMPOSER_MEMORY_LIMIT=-1
 #trap prod_command_trap DEBUG
 source <(fzf --zsh)
 
-export SSH_AUTH_SOCK=/Users/naugustin/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+# Set SSH_AUTH_SOCK for Bitwarden SSH agent on macOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export SSH_AUTH_SOCK=/Users/naugustin/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+fi
